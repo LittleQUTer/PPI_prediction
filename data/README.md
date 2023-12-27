@@ -1,0 +1,1 @@
+Due to the limitation of file upload size, all data has been uploaded to Google Drive. The download link is: https://drive.google.com/drive/folders/1EsGQqJcOr7iwf1SQ5sPS9Vz3974WCjnP?usp=sharing. Or you could down the data from DeepTrio (https://github.com/huxiaoti/deeptrio/tree/master/data/benchmarks).
