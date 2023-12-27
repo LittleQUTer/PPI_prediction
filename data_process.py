@@ -160,12 +160,6 @@ def read_ppi_pairs_for_DeepTrio(dataset='BioGRID_S', data_process_path='process/
         # pair_save_path=os.path.join(data_process_path,"pairs")
         protein_1, protein_2, interactions = read_pairs(protein_pair_path)
         return protein_1, protein_2, interactions
-    elif dataset == 'PIPR_core':
-        print("process PIPR_core paris ...")
-        protein_pair_path = os.path.join(protein_data_path, 'yeast core dataset from PIPR', 'protein.actions.tsv')
-        # pair_save_path=os.path.join(data_process_path,"pairs")
-        protein_1, protein_2, interactions = read_pairs(protein_pair_path)
-        return protein_1, protein_2, interactions
     elif dataset == 'virus-human':
         print("process virus-human paris ...")
         protein_pair_path = os.path.join(protein_data_path, 'virus-human interaction dataset', 'human_virus_pair.tsv')
@@ -200,10 +194,6 @@ def process_proteins_for_DeepTrio(dataset='BioGRID_S', data_process_path='proces
         print("process DeepFE-PPI_core dataset ...")
         protein_data_path = os.path.join(protein_data_path, 'yeast core dataset from DeepFE-PPI',
                                          'action_dictionary.tsv')
-
-    elif dataset == 'PIPR_core':
-        print("process PIPR_core dataset ...")
-        protein_data_path = os.path.join(protein_data_path, 'yeast core dataset from PIPR', 'protein.dictionary.tsv')
 
     elif dataset == 'virus-human':
         print("process virus-human dataset ...")
@@ -244,8 +234,7 @@ if __name__ == '__main__':
 
     import random
 
-    dataset = ['BioGRID_S', 'BioGRID_H', 'multiple_species', 'DeepFE-PPI_core', 'PIPR_core', 'virus-human']
-    # dataset = ['BioGRID_S', 'BioGRID_H', 'multiple_species', 'DeepFE-PPI_core', 'PIPR_core']
+    dataset = ['BioGRID_S', 'BioGRID_H', 'multiple_species', 'DeepFE-PPI_core', 'virus-human']
     # dataset.reverse()
     random.shuffle(dataset)
     for set in dataset:
